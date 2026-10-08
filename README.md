@@ -2,7 +2,9 @@
 
 Fine-tune **`FacebookAI/xlm-roberta-base`** cho bài toán nhận dạng thực thể (NER) trên dữ liệu tiếng Việt **PAP_NER**. Mô hình dùng encoder XLM-RoBERTa, dropout và linear classifier; loss là cross-entropy, dự đoán nhãn bằng argmax.
 
-Repository lưu mã runner độc lập, cấu hình và các output đã xuất sau training: biểu đồ, lịch sử train, kết quả test và đánh giá mở rộng. Các kết quả bên dưới thuộc run **`papner_xlm_r_softmax_20ep_rtx3090_24gb`**.
+**Notebook chính: [PAP_NER_XLMR_Softmax_evalplus_v1.ipynb](PAP_NER_XLMR_Softmax_evalplus_v1.ipynb)** — chứa toàn bộ quy trình thiết lập môi trường, training, test, đánh giá mở rộng và inference, cùng output đã chạy.
+
+Repository lưu notebook chính, mã runner độc lập, cấu hình và các output đã xuất sau training: biểu đồ, lịch sử train, kết quả test và đánh giá mở rộng. Các kết quả bên dưới thuộc run **`papner_xlm_r_softmax_20ep_rtx3090_24gb`**.
 
 **Kết quả chính:** Entity Strict Micro F1 trên test đạt **97,9687%**; checkpoint tốt nhất được chọn tại **epoch 7** theo Dev Entity Strict Micro F1 (**97,8952%**).
 
@@ -170,7 +172,19 @@ Bảng chi tiết theo từng loại thực thể: [Markdown](advanced_eval_tabl
 
 **Lưu ý khi so sánh:** output đánh giá mở rộng ghi nhận `possible = 20.979`, trong khi seqeval strict report có `support = 20.977`. Sự khác biệt về số thực thể được đếm cho thấy hai bộ đánh giá không hoàn toàn tương đương: strict F1 mở rộng là **97,9032%**, còn strict F1 chính là **97,9687%**. Khác biệt trong xử lý chuỗi BIO có thể là một nguyên nhân; cần đối chiếu mã đánh giá để kết luận cụ thể. Các số liệu gốc được giữ nguyên; metric chính của lần train là **seqeval Entity Strict Micro F1**.
 
-## Chạy lại training, test và inference
+## Sử dụng notebook chính
+
+Mở [PAP_NER_XLMR_Softmax_evalplus_v1.ipynb](PAP_NER_XLMR_Softmax_evalplus_v1.ipynb) trên GitHub để xem code, text output và biểu đồ đã lưu. Để chạy lại, mở bằng JupyterLab/Jupyter Notebook trên **Linux với RTX 3090 24 GB**; notebook hiện kiểm tra đúng hệ điều hành và GPU này.
+
+1. Mở notebook, kiểm tra cell **GPU và cấu hình thí nghiệm**: mặc định `MODEL_CHOICE = "xlm_r"`, `TRIAL_EPOCHS = 20`, `RESUME = False`.
+2. Chạy các cell theo thứ tự để thiết lập môi trường, tải dữ liệu, ghép runner và smoke test.
+3. Chạy phần training và theo dõi quá trình; các phần tiếp theo hiển thị lịch sử, biểu đồ, test report, đánh giá mở rộng và inference.
+
+Nếu dùng checkpoint đã train, tải `best_model.pt` từ Drive và đặt vào `RUN_DIR` mà cell cấu hình in ra. Chạy các phần thiết lập đến **Ghép runner và kiểm tra syntax**, bỏ qua các phần smoke test/training/theo dõi training, rồi chạy phần **Đánh giá trên test split** hoặc **Inference thử với một câu đã word-segment**. Phần vẽ lịch sử cần thêm `history.json` trong `RUN_DIR`.
+
+Các lệnh CLI bên dưới là cách sử dụng runner độc lập đi kèm notebook.
+
+## Chạy bằng runner độc lập (CLI)
 
 ### 1. Clone và cài môi trường
 
@@ -186,7 +200,7 @@ python -m pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/
 python -m pip install transformers==4.44.2 numpy==1.26.4 scikit-learn==1.5.2 seqeval==1.2.2 sentencepiece==0.2.0 protobuf==5.28.3 tensorboard==2.18.0 tqdm==4.66.5 huggingface_hub==0.36.2
 ```
 
-[requirements-frozen.txt](requirements-frozen.txt) lưu toàn bộ phiên bản của môi trường gốc để tham khảo. Nếu mở notebook riêng để sử dụng runner, cần cài thêm môi trường Jupyter phù hợp.
+[requirements-frozen.txt](requirements-frozen.txt) lưu toàn bộ phiên bản của môi trường gốc để tham khảo. Notebook chính tự thiết lập môi trường chạy riêng; để mở và thực thi notebook cần có JupyterLab/Jupyter Notebook trên máy Linux dùng GPU.
 
 ### 2. Tải dataset và tạo cấu hình theo máy hiện tại
 
@@ -264,6 +278,7 @@ python papner_multimodel_classifier_runner.py train --config config.local.json
 
 | File / thư mục | Nội dung |
 | --- | --- |
+| [PAP_NER_XLMR_Softmax_evalplus_v1.ipynb](PAP_NER_XLMR_Softmax_evalplus_v1.ipynb) | **Notebook chính**, giữ nguyên code và output đã chạy |
 | `papner_multimodel_classifier_runner.py` | Runner với các mode `smoke`, `train`, `test`, `predict` |
 | `run_config.json`, `launch_config.json` | Cấu hình gốc của lần train |
 | `history.json` | Loss, F1, thời gian và VRAM của 12 epoch |
