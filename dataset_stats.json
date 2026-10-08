@@ -1,0 +1,14 @@
+{
+  "train": {
+    "truncated_sentences": 0,
+    "discarded_words": 0,
+    "sha256": "46415fc40e88c3a415a2ee4404bfa39e8a54f8e2cc936a9abb204cb18c323ff1",
+    "limit": null
+  },
+  "dev": {
+    "truncated_sentences": 0,
+    "discarded_words": 0,
+    "sha256": "e4f7875b0ac5b319f36b3a203f670bb2bee55f1c551674a611113f530fee82ab",
+    "limit": null
+  }
+}

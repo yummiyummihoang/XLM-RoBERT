@@ -1,0 +1,24 @@
+# Model weights and training checkpoints are distributed via Google Drive.
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+
+# Local environments and generated caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+feature-cache/
+hf-datasets/
+runs/
+checkpoints/
+logs/
+*.log
+*.pid
+*.tmp
+.env
+.env.*
+config.local*.json

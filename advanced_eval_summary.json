@@ -1,0 +1,304 @@
+{
+  "overall": {
+    "ent_type": {
+      "correct": 20646.0,
+      "incorrect": 9.0,
+      "partial": 0.0,
+      "missed": 324.0,
+      "spurious": 97.0,
+      "possible": 20979.0,
+      "actual": 20752.0,
+      "precision": 0.9948920585967618,
+      "recall": 0.9841269841269841,
+      "f1": 0.9894802425055713
+    },
+    "partial": {
+      "correct": 20428.0,
+      "incorrect": 0.0,
+      "partial": 227.0,
+      "missed": 324.0,
+      "spurious": 97.0,
+      "possible": 20979.0,
+      "actual": 20752.0,
+      "precision": 0.989856399383192,
+      "recall": 0.9791458124791458,
+      "f1": 0.9844719752701828
+    },
+    "strict": {
+      "correct": 20428.0,
+      "incorrect": 227.0,
+      "partial": 0.0,
+      "missed": 324.0,
+      "spurious": 97.0,
+      "possible": 20979.0,
+      "actual": 20752.0,
+      "precision": 0.9843870470316114,
+      "recall": 0.9737356404023071,
+      "f1": 0.9790323740145216
+    },
+    "exact": {
+      "correct": 20428.0,
+      "incorrect": 227.0,
+      "partial": 0.0,
+      "missed": 324.0,
+      "spurious": 97.0,
+      "possible": 20979.0,
+      "actual": 20752.0,
+      "precision": 0.9843870470316114,
+      "recall": 0.9737356404023071,
+      "f1": 0.9790323740145216
+    }
+  },
+  "by_tag": {
+    "CQ": {
+      "strict": {
+        "correct": 7042.0,
+        "incorrect": 60.0,
+        "partial": 0.0,
+        "missed": 209.0,
+        "spurious": 36.0,
+        "possible": 7311.0,
+        "actual": 7138.0,
+        "precision": 0.9865508545811151,
+        "recall": 0.9632061277527014,
+        "f1": 0.9747387362447228
+      },
+      "partial": {
+        "correct": 7042.0,
+        "incorrect": 0.0,
+        "partial": 60.0,
+        "missed": 209.0,
+        "spurious": 36.0,
+        "possible": 7311.0,
+        "actual": 7138.0,
+        "precision": 0.9907537125245167,
+        "recall": 0.9673095335795376,
+        "f1": 0.9788912727524397
+      },
+      "ent_type": {
+        "correct": 7093.0,
+        "incorrect": 9.0,
+        "partial": 0.0,
+        "missed": 209.0,
+        "spurious": 36.0,
+        "possible": 7311.0,
+        "actual": 7138.0,
+        "precision": 0.9936957130848977,
+        "recall": 0.9701819176583231,
+        "f1": 0.9817980483078412
+      },
+      "exact": {
+        "correct": 7042.0,
+        "incorrect": 60.0,
+        "partial": 0.0,
+        "missed": 209.0,
+        "spurious": 36.0,
+        "possible": 7311.0,
+        "actual": 7138.0,
+        "precision": 0.9865508545811151,
+        "recall": 0.9632061277527014,
+        "f1": 0.9747387362447228
+      }
+    },
+    "ĐT": {
+      "strict": {
+        "correct": 6974.0,
+        "incorrect": 106.0,
+        "partial": 0.0,
+        "missed": 99.0,
+        "spurious": 38.0,
+        "possible": 7179.0,
+        "actual": 7118.0,
+        "precision": 0.979769598201742,
+        "recall": 0.9714444908761666,
+        "f1": 0.9755892844652724
+      },
+      "partial": {
+        "correct": 6974.0,
+        "incorrect": 0.0,
+        "partial": 106.0,
+        "missed": 99.0,
+        "spurious": 38.0,
+        "possible": 7179.0,
+        "actual": 7118.0,
+        "precision": 0.987215509974712,
+        "recall": 0.978827134698426,
+        "f1": 0.9830034272924391
+      },
+      "ent_type": {
+        "correct": 7080.0,
+        "incorrect": 0.0,
+        "partial": 0.0,
+        "missed": 99.0,
+        "spurious": 38.0,
+        "possible": 7179.0,
+        "actual": 7118.0,
+        "precision": 0.9946614217476819,
+        "recall": 0.9862097785206854,
+        "f1": 0.9904175701196055
+      },
+      "exact": {
+        "correct": 6974.0,
+        "incorrect": 106.0,
+        "partial": 0.0,
+        "missed": 99.0,
+        "spurious": 38.0,
+        "possible": 7179.0,
+        "actual": 7118.0,
+        "precision": 0.979769598201742,
+        "recall": 0.9714444908761666,
+        "f1": 0.9755892844652724
+      }
+    },
+    "VBPL": {
+      "strict": {
+        "correct": 809.0,
+        "incorrect": 19.0,
+        "partial": 0.0,
+        "missed": 0.0,
+        "spurious": 19.0,
+        "possible": 828.0,
+        "actual": 847.0,
+        "precision": 0.9551357733175915,
+        "recall": 0.9770531400966184,
+        "f1": 0.9659701492537313
+      },
+      "partial": {
+        "correct": 809.0,
+        "incorrect": 0.0,
+        "partial": 19.0,
+        "missed": 0.0,
+        "spurious": 19.0,
+        "possible": 828.0,
+        "actual": 847.0,
+        "precision": 0.9663518299881936,
+        "recall": 0.9885265700483091,
+        "f1": 0.977313432835821
+      },
+      "ent_type": {
+        "correct": 828.0,
+        "incorrect": 0.0,
+        "partial": 0.0,
+        "missed": 0.0,
+        "spurious": 19.0,
+        "possible": 828.0,
+        "actual": 847.0,
+        "precision": 0.9775678866587958,
+        "recall": 1.0,
+        "f1": 0.9886567164179104
+      },
+      "exact": {
+        "correct": 809.0,
+        "incorrect": 19.0,
+        "partial": 0.0,
+        "missed": 0.0,
+        "spurious": 19.0,
+        "possible": 828.0,
+        "actual": 847.0,
+        "precision": 0.9551357733175915,
+        "recall": 0.9770531400966184,
+        "f1": 0.9659701492537313
+      }
+    },
+    "NG": {
+      "strict": {
+        "correct": 4021.0,
+        "incorrect": 0.0,
+        "partial": 0.0,
+        "missed": 0.0,
+        "spurious": 0.0,
+        "possible": 4021.0,
+        "actual": 4021.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "partial": {
+        "correct": 4021.0,
+        "incorrect": 0.0,
+        "partial": 0.0,
+        "missed": 0.0,
+        "spurious": 0.0,
+        "possible": 4021.0,
+        "actual": 4021.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "ent_type": {
+        "correct": 4021.0,
+        "incorrect": 0.0,
+        "partial": 0.0,
+        "missed": 0.0,
+        "spurious": 0.0,
+        "possible": 4021.0,
+        "actual": 4021.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "exact": {
+        "correct": 4021.0,
+        "incorrect": 0.0,
+        "partial": 0.0,
+        "missed": 0.0,
+        "spurious": 0.0,
+        "possible": 4021.0,
+        "actual": 4021.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    },
+    "SL": {
+      "strict": {
+        "correct": 1582.0,
+        "incorrect": 42.0,
+        "partial": 0.0,
+        "missed": 16.0,
+        "spurious": 4.0,
+        "possible": 1640.0,
+        "actual": 1628.0,
+        "precision": 0.9717444717444718,
+        "recall": 0.9646341463414634,
+        "f1": 0.9681762545899633
+      },
+      "partial": {
+        "correct": 1582.0,
+        "incorrect": 0.0,
+        "partial": 42.0,
+        "missed": 16.0,
+        "spurious": 4.0,
+        "possible": 1640.0,
+        "actual": 1628.0,
+        "precision": 0.9846437346437347,
+        "recall": 0.9774390243902439,
+        "f1": 0.9810281517747859
+      },
+      "ent_type": {
+        "correct": 1624.0,
+        "incorrect": 0.0,
+        "partial": 0.0,
+        "missed": 16.0,
+        "spurious": 4.0,
+        "possible": 1640.0,
+        "actual": 1628.0,
+        "precision": 0.9975429975429976,
+        "recall": 0.9902439024390244,
+        "f1": 0.9938800489596082
+      },
+      "exact": {
+        "correct": 1582.0,
+        "incorrect": 42.0,
+        "partial": 0.0,
+        "missed": 16.0,
+        "spurious": 4.0,
+        "possible": 1640.0,
+        "actual": 1628.0,
+        "precision": 0.9717444717444718,
+        "recall": 0.9646341463414634,
+        "f1": 0.9681762545899633
+      }
+    }
+  }
+}
